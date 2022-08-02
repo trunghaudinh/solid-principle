@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Solid-Principle.iml" filepath="$PROJECT_DIR$/.idea/modules/Solid-Principle.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Solid-Principle.app.unitTest.iml" />
     </modules>
   </component>
 </project>

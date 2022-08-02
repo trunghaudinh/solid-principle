@@ -1,4 +1,4 @@
-package com.trunghaudinh.solid_principle.single_responsibility_principle
+package com.trunghaudinh.solid_principle.open_close_principle
 
 fun main() {
     val developer = Employeee("Trung Hau Dinh", 4, 18, "Kotlin", typeEmploy = Employ.DEVELOP)
@@ -29,7 +29,7 @@ fun main() {
 
 }
 
-data class Employeee(
+internal data class Employeee(
     private val name: String,
     private val exp: Int,
     private val age: Int,

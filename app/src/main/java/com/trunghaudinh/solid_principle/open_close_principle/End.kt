@@ -1,4 +1,4 @@
-package com.trunghaudinh.solid_principle.single_responsibility_principle
+package com.trunghaudinh.solid_principle.open_close_principle
 
 fun main() {
     val listDeveloper : MutableList<Employee> = mutableListOf()
