@@ -25,8 +25,13 @@ fun main() {
         add(sale)
     }
 
-    println(listDeveloper.toString())
+//    println(listDeveloper.toString())
 
+    val normalTiktoker = Tiktoker("chipu", 2)
+    val hotTiktoker = HotTiktoker("Den vau", 2)
+
+    println("normal tiktoker money = ${normalTiktoker.payForPR()}")
+    println("hot tiktoker money = ${hotTiktoker.payForPR()}")
 }
 
 internal data class Employeee(
@@ -62,4 +67,23 @@ enum class Employ {
     DEVELOP,
     TESTER,
     SALE
+}
+
+
+open class Tiktoker(
+    private val name: String,
+    private val totalPost: Int
+) {
+    open fun payForPR(): Int {
+        return totalPost.times(1000)
+    }
+}
+
+class HotTiktoker(
+    private val name: String,
+    private val totalPost: Int
+) : Tiktoker(name, totalPost) {
+    override fun payForPR(): Int {
+        return totalPost.times(2000)
+    }
 }

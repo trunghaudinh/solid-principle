@@ -11,6 +11,7 @@ data class Employee(
 ) {
 
     fun saveUser() {
+        // check invalid
         if (user.length > 6 && password.length > 6) {
             // save user
         } else {
@@ -18,5 +19,4 @@ data class Employee(
             file.appendText("insert user $user error")
         }
     }
-
 }

@@ -4,7 +4,7 @@ fun main() {
     val logger = FileLogger()
     val validatorUser = UserValidatorImpl()
 
-    val employee = Employee("trung hau", 1, 18, "trunghaudinh", "123123", logger, validatorUser)
+    val employee = Employee("trung hau", 1, 18, "trunghaudinh", "1231232", logger, validatorUser)
     employee.saveUser()
 }
 

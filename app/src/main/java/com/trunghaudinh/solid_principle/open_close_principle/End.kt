@@ -1,18 +1,24 @@
 package com.trunghaudinh.solid_principle.open_close_principle
 
 fun main() {
-    val listDeveloper : MutableList<Employee> = mutableListOf()
+    val listEmployee : MutableList<Employee> = mutableListOf()
     val developer = Developer("Trung Hau Dinh", 4,18,"Kotlin")
     val tester = Tester("Doan Thi Linh", 4,26,"Music Maker",100)
     val sale = Sale("Luong Van Thon", 4,30,69,100)
-    listDeveloper.add(developer)
-    listDeveloper.add(tester)
-    listDeveloper.add(sale)
 
-    val employee = listDeveloper[2]
-    if (employee is Sale){
-        employee.working()
-        employee.totalMoney()
+
+    listEmployee.add(developer)
+    listEmployee.add(tester)
+    listEmployee.add(sale)
+
+//    val employee = listDeveloper[2]
+//    if (employee is Sale){
+//        employee.working()
+//        employee.totalMoney()
+//    }
+
+    listEmployee.map {
+        it.working()
     }
 
 }
