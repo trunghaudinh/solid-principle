@@ -1,10 +1,10 @@
 package com.trunghaudinh.solid_principle.open_close_principle
 
 fun main() {
-    val listEmployee : MutableList<Employee> = mutableListOf()
-    val developer = Developer("Trung Hau Dinh", 4,18,"Kotlin")
-    val tester = Tester("Doan Thi Linh", 4,26,"Music Maker",100)
-    val sale = Sale("Luong Van Thon", 4,30,69,100)
+    val listEmployee: MutableList<Employee> = mutableListOf()
+    val developer: Employee = Developer("Trung Hau Dinh", 4, 18, "Kotlin")
+    val tester = Tester("Doan Thi Linh", 4, 26, "Music Maker", 100)
+    val sale = Sale("Luong Van Thon", 4, 30, 69, 100)
 
 
     listEmployee.add(developer)
@@ -23,13 +23,16 @@ fun main() {
 
 }
 
-
 abstract class Employee(
     private val name: String,
     private val exp: Int,
     private val age: Int
 ) {
     abstract fun working()
+
+    open fun printInfo() {
+        println("name = $name , exp = $exp   age = $age")
+    }
 }
 
 data class Developer(
@@ -47,14 +50,14 @@ data class Tester(
     private val name: String,
     private val exp: Int,
     private val age: Int,
-    private val testSoftWare : String,
+    private val testSoftWare: String,
     private val totalBug: Int
 ) : Employee(name, exp, age) {
     override fun working() {
         println("Tester $name test app $testSoftWare")
     }
 
-    fun totalBugsTested(){
+    fun totalBugsTested() {
         println("Tester $name tested $totalBug bugs")
     }
 }

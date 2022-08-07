@@ -4,17 +4,21 @@ fun main() {
 
 }
 
-interface Bird {
+interface Animal {
     fun fly()
 }
 
-class Hawk : Bird {
+interface FlyableAnimal{
+    fun fly()
+}
+
+class Hawk : Animal {
     override fun fly() {
         println("Hawk can fly")
     }
 }
 
-class Penguin : Bird {
+class Dog : Animal {
     override fun fly() {
         throw Exception("Penguin can't fly")
     }

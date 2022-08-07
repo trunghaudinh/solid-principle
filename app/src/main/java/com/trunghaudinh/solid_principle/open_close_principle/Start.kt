@@ -71,8 +71,8 @@ enum class Employ {
 
 
 open class Tiktoker(
-    private val name: String,
-    private val totalPost: Int
+    protected val name: String,
+    protected val totalPost: Int
 ) {
     open fun payForPR(): Int {
         return totalPost.times(1000)
@@ -80,8 +80,8 @@ open class Tiktoker(
 }
 
 class HotTiktoker(
-    private val name: String,
-    private val totalPost: Int
+     name: String,
+     totalPost: Int
 ) : Tiktoker(name, totalPost) {
     override fun payForPR(): Int {
         return totalPost.times(2000)
